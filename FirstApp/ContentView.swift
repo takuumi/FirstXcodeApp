@@ -9,9 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("やどドヤァ!")
-            .padding()
-            .frame(height: 2.0)
+        
+        ZStack{
+            
+            Color.red.ignoresSafeArea(.all)
+
+            Text("やどドヤァ!")
+                .padding()
+                .frame(height: 2.0)
+
+        }
     }
 }
 
