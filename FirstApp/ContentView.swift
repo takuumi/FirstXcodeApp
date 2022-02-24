@@ -12,15 +12,29 @@ struct ContentView: View {
         
         
         VStack(alignment: .leading)  {
-            Text("Turtle Rock")
-                .font(.title)
-            HStack {
-                Text("Joshua Tree National Park")
-                    .font(.subheadline)
+            MapView()
+                .edgesIgnoringSafeArea(.top)
+                .frame(height: 300)
+            
+            YadonImage()
+                .offset(y: -130)
+                .padding(.bottom, -130)
+            
+            VStack(alignment: .leading) {
+                Text("Turtle Rock")
+                    .font(.title)
+                HStack {
+                    Text("Joshua Tree National Park")
+                        .font(.subheadline)
+                    
                     Spacer()
-                Text("California")
-                    .font(.subheadline)
+                    
+                    Text("California")
+                        .font(.subheadline)
+                }
             }.padding()
+            
+            Spacer()
         }
         
         ZStack{
