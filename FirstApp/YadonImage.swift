@@ -10,6 +10,8 @@ import SwiftUI
 struct YadonImage: View {
     var body: some View {
         Image("yadon")
+            .resizable(resizingMode: .stretch)
+            .aspectRatio(contentMode:.fit)
             .clipShape(Circle())
             .overlay(
                 Circle().stroke(Color.white, lineWidth: 4))
